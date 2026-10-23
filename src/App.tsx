@@ -47,7 +47,7 @@ export const App: React.FC = () => {
   const [specialAmalLog, setSpecialAmalLog] = useState<Record<string, boolean>>({});
 
   const [appStats, setAppStats] = useState(repository.getAppStats(currentViewingDate));
-  const [yesterdayChampion, setYesterdayChampion] = useState<ChampionInfo>(repository.getYesterdayChampion());
+  const [yesterdayChampion, setYesterdayChampion] = useState<ChampionInfo | null>(repository.getYesterdayChampion());
   const [duaNotes, setDuaNotes] = useState<DuaNote[]>(repository.getDuaNotes());
   const [reminders, setReminders] = useState(repository.getReminders());
   const [userName, setUserName] = useState<string>(repository.getUserName());

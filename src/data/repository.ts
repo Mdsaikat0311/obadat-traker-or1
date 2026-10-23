@@ -731,23 +731,19 @@ export class IbadatRepository {
     };
   }
 
-  getYesterdayChampion(): ChampionInfo {
+  getYesterdayChampion(): ChampionInfo | null {
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     const yesterdayKey = this.formatIsoDate(yesterday);
     const userYesterday = this.calculatePoints(yesterdayKey);
 
-    if (userYesterday >= 130) {
+    if (userYesterday > 0) {
       return {
         name: this.getUserName(),
         points: userYesterday
       };
-    } else {
-      return {
-        name: "আহমাদুল্লাহ",
-        points: 145
-      };
     }
+    return null;
   }
 
   getLeaderboard(metricType: string): LeaderboardUser[] {
