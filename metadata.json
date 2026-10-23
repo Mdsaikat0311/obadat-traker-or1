@@ -1,0 +1,6 @@
+{
+  "name": "ইবাদত ট্র্যাকার",
+  "description": "দৈনিক সালাত, তাহাজ্জুদ, নফল, যিকির, কুরআন ও বিশেষ আমল ট্র্যাকার, ক্যালেন্ডার রিপোর্ট, বিস্তারিত পরিসংখ্যান ও ইসলামিক নোট।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

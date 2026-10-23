@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.yourdomain.ibadattracker" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Ibadat Reminder</name>
+    <description>Sample Apache Cordova App</description>
+    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    
+    <!-- Local Notification Plugin add kora holo -->
+    <plugin name="cordova-plugin-local-notification" />
+
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <!-- ANDROID কনফিগারেশন[cite: 1] -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+        
+        <!-- নতুন স্প্ল্যাশ স্ক্রিন সেটিংস[cite: 1] -->
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#ffffffff" />
+
+        <!-- নোটিফিকেশন পারমিশন[cite: 1] -->
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+            <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+            <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+            <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+            <uses-permission android:name="android.permission.VIBRATE" />
+            <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+            <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+        </config-file>
+
+        <!-- অডিও ফাইল[cite: 1] -->
+        <resource-file src="res/raw/reminder_sound.mp3" target="app/src/main/res/raw/reminder_sound.mp3" />
+        <resource-file src="res/raw/reminder_sound2.mp3" target="app/src/main/res/raw/reminder_sound2.mp3" />
+        
+        <!-- অ্যাপ লোগো[cite: 1] -->
+        <icon src="res/icon.png" />
+
+    </platform>
+
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

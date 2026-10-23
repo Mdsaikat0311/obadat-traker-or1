@@ -1,0 +1,47 @@
+C:\Users\mdpk0>cd C:\Myproject
+
+C:\Myproject>cordova create ibadat-tracker com.yourdomain.ibadattracker Ibadat Reminder
+Creating a new cordova project.
+
+C:\Myproject>cd ibadat-tracker
+
+C:\Myproject\ibadat-tracker>cordova plugin add cordova-plugin-androidx-adapter
+Adding cordova-plugin-androidx-adapter to package.json
+
+C:\Myproject\ibadat-tracker>cordova plugin add cordova-plugin-local-notification@latest
+cordova plugin add cordova-plugin-local-notification
+
+
+Adding cordova-plugin-local-notification to package.json
+
+
+
+cordova plugin add cordova-plugin-background-mode
+
+cordova plugin add cordova-plugin-android-permissions
+cordova plugin add cordova-plugin-splashscreen
+
+
+C:\Myproject\ibadat-tracker>cordova platform add android
+Using cordova-fetch for cordova-android
+Adding android project...
+Creating Cordova project for the Android platform:
+        Path: platforms\android
+        Package: com.yourdomain.ibadattracker
+        Name: IbadatTrackerApp
+        Activity: MainActivity
+        Android Target SDK: android-35
+        Android Compile SDK: 35
+Subproject Path: CordovaLib
+Subproject Path: app
+Android project created with cordova-android@14.0.1
+Installing "cordova-plugin-androidx-adapter" for android
+(node:7792) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Installing "cordova-plugin-local-notification" for android
+Installing "cordova-plugin-device" for android
+Subproject Path: CordovaLib
+Subproject Path: app
+cordova-plugin-androidx-adapter: Processed 34 source files in 1471ms
+
+C:\Myproject\ibadat-tracker>cordova build android
